@@ -1,0 +1,30 @@
+div{
+background-color: rgb(105, 105, 234);
+}
+body{
+background-color: chartreuse;
+}
+p{
+background-color: rgb(159, 36, 36);
+}
+.red-text{
+    color:rgb(159, 36, 36)
+}
+.yellow-text{
+    color: yellow
+}
+.big-size{
+   font-size: 50px ; 
+}
+.border{
+    border-style :solid;
+    border-width : 6px;
+    border-color: blue;
+}
+p.border{
+    border-style :dashed;
+    border-width : 2px;
+}
+#div1{
+    background-color: antiquewhite;
+}

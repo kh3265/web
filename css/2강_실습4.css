@@ -1,0 +1,33 @@
+div.a{
+  background-color: rgb(180, 148, 210);  color: rgb(33, 128, 96);
+}
+div.b{
+background-color: rgb(171, 225, 118); 
+}
+div.c{
+text-align: left;
+}
+div.d{
+text-align: center;
+}
+div.e{
+    text-align: right;
+}
+div.f{
+    text-decoration-line: overline;
+}
+div.g{
+    text-decoration: underline;
+}
+div.h{
+    text-transform: uppercase;
+}
+div.i{
+    text-transform: lowercase;
+}
+div.j{
+    text-indent: 5em;
+}
+div.k{
+    text-indent: -5em;
+}

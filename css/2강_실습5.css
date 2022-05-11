@@ -1,0 +1,24 @@
+div.a{
+    font-family: 'Times New Roman', Times, serif;
+}
+div.b{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+div.c{
+    font-style: oblique;
+}
+div.d{
+    font-style: inherit;
+}
+div.e{
+    font-size: xx-large;
+}
+div.f{
+    font-size: x-small;
+}
+div.g{
+    line-height: 0.1em; 
+}
+div.h{
+    line-height: 5em;
+}
