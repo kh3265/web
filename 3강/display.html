@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+  <style>
+      .inline{/*크기 조정 안됨..*/
+          display: inline;
+          width: 200px;
+      }
+      .block{
+        display: block;
+      }
+      .none{
+          display: none;
+      }
+      .inlineblock{/*크기조정과 옆으로 나열이 동시에 됨*/
+          display: inline-block;
+          height: 100px;
+          border: 1px red solid;
+          padding-left: 10px;
+          padding-top: 100px ;
+          margin: (20px 50px);
+          
+       }
+      div{
+            width: 28px;
+            height: 50px;
+        }
+  </style>
+    <div class="none">div</div>
+    <div class="inline">div</div>
+    <span class="block">span</span>
+    <h1 class="inlineblock">h1</h1>
+    <h1 class="inlineblock">h1</h1>
+    <div>div평범</div>
+</body>
+</html>
