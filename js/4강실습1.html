@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let number_input = prompt('숫자를 입력해주세요');
+
+        if (isNaN(number_input) == false) {
+            if (number_input >= 1 && number_input <= 100) { }
+            else { number_input = prompt("1부터100사이로 넣어주세요"); }
+        }
+        else if (isNaN(number_input) == true) {
+            number_input = prompt("숫자!!입력해주세요");
+
+        }
+        for (var i = 1; i < 101; i++) {
+            console.log(i);
+        }
+
+
+    </script>
+</body>
+
+</html>
