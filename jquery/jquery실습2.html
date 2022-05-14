@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+</head>
+
+<body>
+    <style>
+        .header {
+            background-color: rgb(22, 22, 153);
+            color: white;
+            display: block;
+            height: 30px;
+            width: 220px;
+            padding-left: 8px;
+            padding-top: 10px;
+        }
+
+        .blankSpace {
+            background-color: rgb(224, 217, 217);
+            display: block;
+            height: 220px;
+            width: 220px;
+            padding-left: 8px;
+            padding-top: 10px;
+
+        }
+
+        .article {
+            background-color: white;
+            width: 190px;
+            padding: 2px;
+            margin-bottom: 12px;
+            margin-left: 9px;
+        }
+    </style>
+    <div>
+        <div class="header">
+            최도근님, 안녕하세요?
+        </div>
+        <div class="blankSpace">
+            페이스북 색감 따라하기
+
+            <div class="article" id="one" style="margin-top: 13px;">
+                <b>박지성</b> SBS에서 월드컵보세요!
+            </div>
+            <div class="article" id="two">
+                <b>안정환</b> MBC죠...
+            </div>
+            <div class="article" id="three">
+                <b>이영표</b> KBS는 수신료의 가치를...
+            </div>
+            
+        </div>
+    </div>
+    <div>
+        <input type="button" value="등록하기" id="registerButton">
+    </div>
+    <script>
+
+        $("#registerButton").click(function () {
+            let name = prompt('이름:');
+            let text = prompt('내용입력:');
+            
+            $('.blankSpace').html("<b>"+name+"</b>" + "  " + text)
+        });
+    </script>
+</body>
+
+</html>
