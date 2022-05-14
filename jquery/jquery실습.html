@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"> </script>
+</head>
+<style>
+    #kopo14 {
+        text-align: center;
+        padding: 30px;
+        display: none;
+        margin-top: 150px;
+        padding: 30px;
+        margin: 10px;
+
+    }
+
+    #kopo14Text {
+        text-align: center;
+        font-size: 100px;
+    }
+</style>
+
+<body>
+    <div id="kopo14Text"> </div>
+
+    <div id="kopo14">
+        <input id="red" type="button" value="빨강">
+        <input id="blue" type="button" value="파랑">
+        <input id="green" type="button" value="초록">
+    </div>
+
+    <script>
+
+        $(function () {
+            let text = prompt("입력창:")
+            if (text == null || text == "") {
+                alert('텍스트값을 입력해 주세요');
+                $('#kopo14').hide();
+            } else {
+                $('#kopo14Text').html(text);
+                $('#kopo14').show();
+
+            }
+        })
+        $("#red").click(function () {
+            $("#kopo14Text").css('color', 'red')
+        })
+        $("#blue").click(function () {
+            $("#kopo14Text").css('color', 'blue')
+        })
+        $("#green").click(function () {
+            $("#kopo14Text").css('color', 'green')
+        })
+    </script>
+</body>
+
+</html>
