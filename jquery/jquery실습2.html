@@ -14,7 +14,6 @@
         .header {
             background-color: rgb(22, 22, 153);
             color: white;
-            display: block;
             height: 30px;
             width: 220px;
             padding-left: 8px;
@@ -23,39 +22,38 @@
 
         .blankSpace {
             background-color: rgb(224, 217, 217);
-            display: block;
-            height: 220px;
             width: 220px;
             padding-left: 8px;
             padding-top: 10px;
+            padding-bottom: 10px;
 
         }
 
-        .article {
+        ol {
+            padding-left: 10px;
+            list-style: none;
+        }
+
+        li {
             background-color: white;
             width: 190px;
             padding: 2px;
             margin-bottom: 12px;
-            margin-left: 9px;
+            margin-left: 0px;
         }
     </style>
-    <div>
+    <div id="main">
         <div class="header">
             최도근님, 안녕하세요?
         </div>
         <div class="blankSpace">
             페이스북 색감 따라하기
 
-            <div class="article" id="one" style="margin-top: 13px;">
-                <b>박지성</b> SBS에서 월드컵보세요!
-            </div>
-            <div class="article" id="two">
-                <b>안정환</b> MBC죠...
-            </div>
-            <div class="article" id="three">
-                <b>이영표</b> KBS는 수신료의 가치를...
-            </div>
-            
+            <ol>
+                <li><b>박지성</b> SBS에서 월드컵보세요! </li>
+                <li><b>안정환</b> MBC죠..</li>
+                <li><b>이영표</b> KBS는 수신료의 가치를...</li>
+            </ol>
         </div>
     </div>
     <div>
@@ -66,8 +64,8 @@
         $("#registerButton").click(function () {
             let name = prompt('이름:');
             let text = prompt('내용입력:');
-            
-            $('.blankSpace').html("<b>"+name+"</b>" + "  " + text)
+            let newArticle = "<li>" + "<b>" + name + "</b>" + "  " + text + '<br>' + "</li>"
+            $("ol").append(newArticle);
         });
     </script>
 </body>
