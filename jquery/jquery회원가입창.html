@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+</head>
+<style>
+    .main {
+        font-size: 20px;
+    }
+
+    #left {
+        display: inline-block;
+        margin-left: 30px;
+        width: 100px;
+    }
+
+    .item {
+        margin-top: 20px;
+    }
+
+    .inputBox {
+        display: inline-block;
+        border-radius: 3px;
+        width: 180px;
+        height: 30px;
+        font-size: 20px;
+        padding-left: 30px;
+    }
+
+    #inputHobby {
+        display: inline-block;
+    }
+
+    #inputSex {
+        display: inline-block;
+    }
+
+    .button1 {
+        display: inline-block;
+        width: 130px;
+        font-size: 20px;
+        background-color: rgb(215, 212, 212);
+        /*border: 3px black solid;*/
+        margin-left: 10px;
+
+
+    }
+
+    .button {
+        margin-top: 60px;
+        margin-left: 50px;
+
+    }
+</style>
+
+<body>
+    <form>
+        <div class="main">
+
+            <div class="item">
+                <label for="inputName" id="left">아이디</label>
+                <input type="email" name="" class="inputBox" id="inputName">
+            </div>
+            <div class="item">
+                <label for="inputPassword" id="left" minlength="5">비밀번호</label>
+                <input type="password" name="" class="inputBox" id="inputPassword">
+            </div>
+            <div class="item">
+                <label for="inputSex" id="left">성별</label>
+                <div id="inputSex">
+                    <input type="radio" name="gender" id="male" value="male">
+                    <label for="male">남</label>
+                    <input type="radio" name="gender" id="female" value="female">
+                    <label for="female">여</label>
+                </div>
+            </div>
+            <div class="item">
+                <label for="inputJob" id="left">직업</label>
+                <select name="selectJob" class="inputBox" id="inputJob">
+                    <option value=""></option>
+                    <option value="무직">무직</option>
+                    <option value="학생">학생</option>
+                    <option value="교사">교사</option>
+                    <option value="개발자">개발자</option>
+                    <option value="운동선수">운동선수</option>
+                    <option value="치과의사">치과의사</option>
+                    <option value="공무원">공무원</option>
+                    <option value="경찰">경찰</option>
+                    <option value="군인">군인</option>
+                    <option value="기타">기타</option>
+                </select>
+            </div>
+            <div class="item">
+                <label for="inputHobby" id="left">취미</label>
+                <div id="inputHobby">
+                    <input type="checkbox" name="hobby" id="hobby1" value="develop">
+                    <label for="hobby1">개발</label>
+                    <input type="checkbox" name="hobby" id="hobby2" value="game">
+                    <label for="hobby2">게임</label>
+                    <input type="checkbox" name="hobby" id="hobby3" value="fishing">
+                    <label for="hobby3">낚시</label><br>
+                    <input type="checkbox" name="hobby" id="hobby4" value="exercise">
+                    <label for="hobby4">운동</label>
+                    <input type="checkbox" name="hobby" id="hobby5" value="book">
+                    <label for="hobby5">독서</label>
+                    <input type="checkbox" name="hobby" id="hobby6" value="music">
+                    <label for="hobby6">음악감상</label>
+                </div>
+            </div>
+
+        </div>
+        <div class="button">
+            <input type="button" class="button1" id="cancel" value="취소">
+            <input type="button" class="button1" id="gogo" value="회원가입">
+        </div>
+    </form>
+    <script>
+        $(document).ready(function () {
+            $("#gogo").click(function () {
+                let checkHobbyNumber = $("input:checkbox[name=hobby]:checked").length;
+                let checkSexNumber = $("input:radio[name=gender]:checked").length;
+                let checkJobNumber = $("#inputJob option:selected").length;
+                let idLength = $("#inputName").val().length;
+                let passwordLength = $("#inputPassword").val().length;
+                
+                if (checkHobbyNumber >= 3 && checkSexNumber != 0 && checkJobNumber != 0 && passwordLength >= 5 && idLength != 0) {
+                    alert("회원가입이 완료되었습니다.");
+                }
+                else alert("조건이 맞지 않습니다.");
+
+            });
+        });
+
+
+    </script>
+</body>
+
+</html>
